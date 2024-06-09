@@ -1,0 +1,77 @@
+title-text:""
+desktop-image: "background.png"
+desktop-image-scale-method: "fitheight"
+desktop-color: "#FFFFFF"
+
+# Terminal options
+terminal-border: "20"
+terminal-left: "20%"
+terminal-top: "40%"
+terminal-width: "60%"
+terminal-height: "20%"
+terminal-font: "DejaVu Sans Regular 12"
+
+terminal-box: "term_*.png"
+
++ boot_menu {
+    left = 32%
+    top = 31%
+    width = 50%
+    height = 50%
+    item_spacing = 20
+    item_font =  "Andy Bold 30"
+    item_color = "#ffffff"
+    selected_item_font = "Andy Bold 30"
+    selected_item_color = "#ffff00"
+    
+    # GRUB-MENU-ICONS
+    icon_width = 32
+    icon_height = 32
+    item_icon_space = 24
+	scrollbar = true
+}
+
+#Label
++ label {
+    id = "__timeout__"
+    left = 50%-150
+    top = 96%
+    width = 300
+    height = 20
+    font = "Andy Bold 24"
+    color = "#ffffff"
+    align = "center"
+    text = "Loading world data: %ds"
+}
+
+#Logo
++ image {
+	#50% of the screen minus the half of the width image
+	left = 50%-243
+	top = 5%
+	file = "logo.png"	
+}
+
+# VERSION
++ label {	
+	left = 1
+	top = 96%
+	height = 54
+	width = 200
+
+	text = "v0.1.0.0 Build 03"
+	font = "Andy Bold 24"
+	color = "white"
+}
+
+# COPY
++ label {	
+	left = 100%-200
+	top = 96%
+	height = 54
+	width = 200
+
+	text = "Copyright 2011 Re-Logic"
+	font = "Andy Bold 24"
+	color = "white"
+}
