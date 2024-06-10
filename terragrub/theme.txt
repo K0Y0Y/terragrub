@@ -1,6 +1,6 @@
 title-text:""
 desktop-image: "background.png"
-desktop-image-scale-method: "fitheight"
+#desktop-image-scale-method: "fitheight"
 desktop-color: "#FFFFFF"
 
 # Terminal options
@@ -13,6 +13,7 @@ terminal-font: "DejaVu Sans Regular 12"
 
 terminal-box: "term_*.png"
 
+#The boot menu option (OS)
 + boot_menu {
     left = 32%
     top = 31%
@@ -21,17 +22,29 @@ terminal-box: "term_*.png"
     item_spacing = 20
     item_font =  "Andy Bold 30"
     item_color = "#ffffff"
-    selected_item_font = "Andy Bold 30"
+    selected_item_font = "Andy Bold 36"
     selected_item_color = "#ffff00"
     
     # GRUB-MENU-ICONS
     icon_width = 32
     icon_height = 32
     item_icon_space = 24
-	scrollbar = true
+	scrollbar = false
 }
 
-#Label
+#Progress bar
++ circular_progress {
+        left = 50%-26
+        top = 50%+200
+        id = "__timeout__"
+        width = 52
+        height = 58
+        center_bitmap = "center.png"
+        tick_bitmap = "p2.png"
+        num_ticks = 8
+}
+
+#Label at button center
 + label {
     id = "__timeout__"
     left = 50%-150
@@ -52,24 +65,24 @@ terminal-box: "term_*.png"
 	file = "logo.png"	
 }
 
-# VERSION
+#Version
 + label {	
 	left = 1
 	top = 96%
 	height = 54
 	width = 200
 
-	text = "v0.1.0.0 Build 03"
+	text = "v0.1.0.0"
 	font = "Andy Bold 24"
 	color = "white"
 }
 
-# COPY
+#Copyright
 + label {	
-	left = 100%-200
+	left = 100%-250
 	top = 96%
 	height = 54
-	width = 200
+	width = 250
 
 	text = "Copyright 2011 Re-Logic"
 	font = "Andy Bold 24"
